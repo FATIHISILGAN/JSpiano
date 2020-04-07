@@ -1,0 +1,162 @@
+<html>
+<head> 
+
+   <!--
+      Html Artist 
+      Furkan karakaş
+      Html updater
+      Fatih Işılgan
+   -->
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+   
+  
+    <div class="piano">
+
+<button onmouseup="do_keyup()"  onclick="do_click()" class="wihte-key C4-key"></button>
+<button  onmouseup="dox_keyup()" onclick="dox_click()"   class="black-key Db4-key"></button>
+<button  onmouseup="re_keyup()"  onclick="re_click()" class="wihte-key D4-key"></button>
+<button class="black-key Eb4-key"></button>
+<button onmouseup="mi_keyup()"  onclick="mi_click()" class="wihte-key E4-key"></button>
+<button onmouseup="fa_keyup()"  onclick="fa_click()" class="wihte-key F4-key"></button>
+<button  class="black-key Gb4-key"></button>
+<button onmouseup="sol_keyup()"  onclick="sol_click()" class="wihte-key G4-key"></button>
+<button  class="black-key Ab4-key"></button>
+<button onmouseup="la_keyup()"  onclick="la_click()" class="wihte-key A4-key"></button>
+<button class="black-key Bb4-key"></button>
+<button onmouseup="si_keyup()" onclick="si_click()" class="wihte-key B4-key"></button>
+<button onmouseup="do_keyup()"  onclick="do_click()" class="wihte-key C5-key"></button>
+<button  class="black-key Db5-key"></button>
+<button onmouseup="re_keyup()"  onclick="re_click()" class="wihte-key D5-key"></button>
+<button class="black-key Eb5-key"></button>
+<button onmouseup="mi_keyup()"  onclick="mi_click()" class="wihte-key E5-key"></button>
+</div>
+
+<audio id="do" src="sesler/316899__jaz-the-man-2__do-stretched.wav" type="audio/wav"></audio>
+<audio id="dox" src="sesler/316900__jaz-the-man-2__do-stretched-octave.wav" type="audio/wav"></audio>
+<audio id="re" src="sesler/316909__jaz-the-man-2__re-stretched.wav" type="audio/wav"></audio>
+<audio id="rex" src="sesler/316908__jaz-the-man-2__re.wav" type="audio/wav"></audio>
+
+<audio id="mi" src="sesler/316907__jaz-the-man-2__mi-stretched.wav" type="audio/wav"></audio>
+<audio id="fa" src="sesler/316905__jaz-the-man-2__fa-stretched.wav" type="audio/wav"></audio>
+<audio id="sol" src="sesler/316911__jaz-the-man-2__sol-stretched.wav" type="audio/wav"></audio>
+
+<audio id="la" src="sesler/316903__jaz-the-man-2__la-stretched.wav" type="audio/wav"></audio>
+<audio id="si" src="sesler/316910__jaz-the-man-2__si-stretched.wav" type="audio/wav"></audio>
+<button onclick="credits_open_click()" type="button" class="btn btn-outline-success">Geliştiriciler</button>
+    
+<div id="credits_popup" style=" width:100%; display: none;  position: absolute; padding-left:100%; padding-right: 100%;" class="alert alert-warning" role="alert">
+  
+   
+
+ 
+   <p style="width: 200px;">
+      Html artist->Furkan Karakaş
+    
+   </p>
+     <p style="width: 200px;">  Html updater->Fatih Işılgan
+     </p>
+ <p style="width: 200px;">  Css artist->Furkan Karakaş
+</p>
+<p style="width: 200px;">   Script coder->Fatih Işılgan</p>
+
+
+   <button onclick="ok()">ok</button>
+
+ </div>
+<script>
+   //script coder ->Fatih IŞILGAN
+
+       var doplayer= document.getElementById('do');
+       var doxplayer= document.getElementById('dox');
+       var replayer= document.getElementById('re');
+       var miplayer= document.getElementById('mi');
+       var faplayer= document.getElementById('fa');
+       var solplayer= document.getElementById('sol');
+       var laplayer= document.getElementById('la');
+       var siplayer= document.getElementById('si');
+
+    function do_click(){
+       doplayer.play();
+    
+    }
+   function do_keyup(){
+      
+     
+      doplayer.load();
+   }
+   function dox_click(){
+       doxplayer.play();
+    
+    }
+   function dox_keyup(){
+      
+     
+      doxplayer.load();
+   }
+    function re_click(){
+       replayer.play();
+    }
+    function re_keyup(){
+      
+     
+      replayer.load();
+   }
+    function mi_click(){
+       miplayer.play();
+    }
+    function mi_keyup(){
+      
+     
+      miplayer.load();
+   }
+    function fa_click(){
+       faplayer.play();
+    }
+    function fa_keyup(){
+      
+     
+      faplayer.load();
+   }
+    function sol_click(){
+       solplayer.play();
+    }
+    function sol_keyup(){
+      
+     
+      solplayer.load();
+   }
+    function la_click(){
+       laplayer.play();
+    }
+    function la_keyup(){
+      
+     
+      laplayer.load();
+   }
+   function si_click(){
+       siplayer.play();
+    }
+    function si_keyup(){
+      
+     
+      siplayer.load();
+   }
+   function ok(){
+         var pop=document.getElementById("credits_popup");
+
+         pop.style.display="none";
+   }
+   function credits_open_click(){
+      var pop=document.getElementById("credits_popup");
+
+         pop.style.display="block";
+   }
+</script>
+</body>
+</html>
